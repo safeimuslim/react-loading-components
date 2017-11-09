@@ -1,5 +1,5 @@
 {
-  "name": "react-loading",
+  "name": "react-loading-components",
   "version": "1.0.0",
   "description": "customable react loading component",
   "main": "index.js",
@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/safeimuslim/react-loading/issues"
   },
-  "homepage": "https://github.com/safeimuslim/react-loading#readme"
+  "homepage": "https://github.com/safeimuslim/react-loading#readme",
+  "dependencies": {
+    "react": "^16.1.0",
+    "react-dom": "^16.1.0"
+  }
 }
