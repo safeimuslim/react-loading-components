@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react'
+import Loading from './Containers/Loading'
 
-class RLC extends React.Component {
-  render() {
-    return (
-      <div>React Loading Components</div>
-    );
+class ReactLoadingComponent extends  Component  {
+  render () {
+    return <Loading {...this.props} />
   }
 }
 
-export default RLC;
+export default ReactLoadingComponent
