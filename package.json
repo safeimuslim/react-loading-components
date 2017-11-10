@@ -1,6 +1,6 @@
 {
   "name": "react-loading-components",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "customable react loading component",
   "main": "build/index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/safeimuslim/react-loading.git"
+    "url": "git+https://github.com/safeimuslim/react-loading-components.git"
   },
   "keywords": [
     "react",
