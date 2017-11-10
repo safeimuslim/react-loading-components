@@ -1,2 +1,2 @@
-# react-loading-component
-customable your react loading component
+# react-loading-components
+customable your react loading components
