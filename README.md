@@ -54,5 +54,5 @@ export default Example;
 
 ## License
 
-MIT
+ISC
 

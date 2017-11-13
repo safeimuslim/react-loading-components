@@ -1,0 +1,64 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn --versoin
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin
+
+Yarn version: 
+  0.22.0
+
+Node version: 
+  7.8.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "react-loading-components",
+    "version": "1.1.1",
+    "description": "customable react loading component",
+    "main": "build/index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "webpack --watch",
+      "build": "webpack"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/safeimuslim/react-loading-components.git"
+    },
+    "keywords": [
+      "react",
+      "loading",
+      "svg"
+    ],
+    "author": "Safei Muslim <safeydev@gmail.com> (http://www.safeimuslim.com)",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/safeimuslim/react-loading/issues"
+    },
+    "homepage": "https://github.com/safeimuslim/react-loading#readme",
+    "dependencies": {
+      "react": "^15.4.0",
+      "react-dom": "^15.4.0",
+      "webpack": "^3.8.1"
+    },
+    "devDependencies": {
+      "babel-cli": "^6.26.0",
+      "babel-core": "^6.26.0",
+      "babel-loader": "^7.1.2",
+      "babel-plugin-transform-object-rest-spread": "^6.26.0",
+      "babel-plugin-transform-react-jsx": "^6.24.1",
+      "babel-preset-env": "^1.6.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: EACCES: permission denied, unlink '/Users/safeimuslim/Library/Caches/Yarn/v1/npm-react-15.6.2-dba0434ab439cfe82f108f0f511663908179aa72/.yarn-tarball.tgz'
