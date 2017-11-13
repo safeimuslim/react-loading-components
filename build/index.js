@@ -194,7 +194,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = function (props) {
   var params = _extends({}, props);
   if (!params.width) {
-    params.width = 128;
+    params.width = 64;
   }
 
   if (!params.height) {
