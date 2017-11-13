@@ -1,6 +1,6 @@
 {
   "name": "react-loading-components",
-  "version": "1.1.9",
+  "version": "1.1.10",
   "description": "customable react loading component",
   "main": "build/index.js",
   "scripts": {
