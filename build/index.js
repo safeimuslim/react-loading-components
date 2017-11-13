@@ -131,6 +131,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
@@ -190,9 +192,21 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  */
 
 exports.default = function (props) {
-  var loaders = [_react2.default.createElement(_Audio2.default, props), _react2.default.createElement(_BallTriangle2.default, props), _react2.default.createElement(_Bars2.default, props), _react2.default.createElement(_Circles2.default, props), _react2.default.createElement(_Grid2.default, props), _react2.default.createElement(_Hearts2.default, props), _react2.default.createElement(_Oval2.default, props), _react2.default.createElement(_Puff2.default, props), _react2.default.createElement(_Rings2.default, props), _react2.default.createElement(_SpinningCircles2.default, props), _react2.default.createElement(_TailSpin2.default, props), _react2.default.createElement(_ThreeDots2.default, props)];
+  var params = _extends({}, props);
+  if (!params.width) {
+    params.width = 128;
+  }
+
+  if (!params.height) {
+    params.height = 64;
+  }
+
+  if (!params.fill) {
+    params.fill = '#ffffff';
+  }
+  var loaders = [_react2.default.createElement(_Audio2.default, params), _react2.default.createElement(_BallTriangle2.default, params), _react2.default.createElement(_Bars2.default, params), _react2.default.createElement(_Circles2.default, params), _react2.default.createElement(_Grid2.default, params), _react2.default.createElement(_Hearts2.default, params), _react2.default.createElement(_Oval2.default, params), _react2.default.createElement(_Puff2.default, params), _react2.default.createElement(_Rings2.default, params), _react2.default.createElement(_SpinningCircles2.default, params), _react2.default.createElement(_TailSpin2.default, params), _react2.default.createElement(_ThreeDots2.default, params)];
   var types = ['audio', 'ball_triangle', 'bars', 'circles', 'grid', 'hearts', 'oval', 'puff', 'rings', 'spinning_circles', 'tail_spin', 'three_dots'];
-  var indexOfTypes = types.indexOf(props.type);
+  var indexOfTypes = types.indexOf(params.type);
   return indexOfTypes < 0 ? loaders[0] : loaders[indexOfTypes];
 };
 
@@ -509,7 +523,7 @@ exports.default = function (_ref) {
         ),
         _react2.default.createElement(
             "circle",
-            { cx: "12.5", cy: "52.5", r: "12.5", "fill-opacity": ".5" },
+            { cx: "12.5", cy: "52.5", r: "12.5", fillOpacity: ".5" },
             _react2.default.createElement("animate", { attributeName: "fill-opacity",
                 begin: "100ms", dur: "1s",
                 values: "1;.2;1", calcMode: "linear",
@@ -600,7 +614,7 @@ exports.default = function (_ref) {
         { width: width, height: height, viewBox: "0 0 140 64", xmlns: "http://www.w3.org/2000/svg", fill: fill },
         _react2.default.createElement(
             "path",
-            { d: "M30.262 57.02L7.195 40.723c-5.84-3.976-7.56-12.06-3.842-18.063 3.715-6 11.467-7.65 17.306-3.68l4.52 3.76 2.6-5.274c3.717-6.002 11.47-7.65 17.305-3.68 5.84 3.97 7.56 12.054 3.842 18.062L34.49 56.118c-.897 1.512-2.793 1.915-4.228.9z", "fill-opacity": ".5" },
+            { d: "M30.262 57.02L7.195 40.723c-5.84-3.976-7.56-12.06-3.842-18.063 3.715-6 11.467-7.65 17.306-3.68l4.52 3.76 2.6-5.274c3.717-6.002 11.47-7.65 17.305-3.68 5.84 3.97 7.56 12.054 3.842 18.062L34.49 56.118c-.897 1.512-2.793 1.915-4.228.9z", fillOpacity: ".5" },
             _react2.default.createElement("animate", { attributeName: "fill-opacity",
                 begin: "0s", dur: "1.4s",
                 values: "0.5;1;0.5",
@@ -609,7 +623,7 @@ exports.default = function (_ref) {
         ),
         _react2.default.createElement(
             "path",
-            { d: "M105.512 56.12l-14.44-24.272c-3.716-6.008-1.996-14.093 3.843-18.062 5.835-3.97 13.588-2.322 17.306 3.68l2.6 5.274 4.52-3.76c5.84-3.97 13.592-2.32 17.307 3.68 3.718 6.003 1.998 14.088-3.842 18.064L109.74 57.02c-1.434 1.014-3.33.61-4.228-.9z", "fill-opacity": ".5" },
+            { d: "M105.512 56.12l-14.44-24.272c-3.716-6.008-1.996-14.093 3.843-18.062 5.835-3.97 13.588-2.322 17.306 3.68l2.6 5.274 4.52-3.76c5.84-3.97 13.592-2.32 17.307 3.68 3.718 6.003 1.998 14.088-3.842 18.064L109.74 57.02c-1.434 1.014-3.33.61-4.228-.9z", fillOpacity: ".5" },
             _react2.default.createElement("animate", { attributeName: "fill-opacity",
                 begin: "0.7s", dur: "1.4s",
                 values: "0.5;1;0.5",
@@ -643,14 +657,14 @@ exports.default = function (_ref) {
         fill = _ref.fill;
     return _react2.default.createElement(
         "svg",
-        { width: width, height: height, viewBox: "0 0 38 38", xmlns: "http://www.w3.org/2000/svg", stroke: stroke },
+        { width: width, height: height, viewBox: "0 0 38 38", xmlns: "http://www.w3.org/2000/svg", stroke: fill },
         _react2.default.createElement(
             "g",
-            { fill: "none", "fill-rule": "evenodd" },
+            { fill: "none", fillRule: "evenodd" },
             _react2.default.createElement(
                 "g",
-                { transform: "translate(1 1)", "stroke-width": "2" },
-                _react2.default.createElement("circle", { "stroke-opacity": ".5", cx: "18", cy: "18", r: "18" }),
+                { transform: "translate(1 1)", strokeWidth: "2" },
+                _react2.default.createElement("circle", { strokeOpacity: ".5", cx: "18", cy: "18", r: "18" }),
                 _react2.default.createElement(
                     "path",
                     { d: "M36 18c0-9.94-8.06-18-18-18" },
@@ -693,7 +707,7 @@ exports.default = function (_ref) {
         { width: width, height: height, viewBox: "0 0 44 44", xmlns: "http://www.w3.org/2000/svg", stroke: fill },
         _react2.default.createElement(
             "g",
-            { fill: "none", "fill-rule": "evenodd", "stroke-width": "2" },
+            { fill: "none", fillRule: "evenodd", strokeWidth: "2" },
             _react2.default.createElement(
                 "circle",
                 { cx: "22", cy: "22", r: "1" },
@@ -760,10 +774,10 @@ exports.default = function (_ref) {
             { width: width, height: height, viewBox: "0 0 45 45", xmlns: "http://www.w3.org/2000/svg", stroke: fill },
             _react2.default.createElement(
                   "g",
-                  { fill: "none", "fill-rule": "evenodd", transform: "translate(1 1)", "stroke-width": "2" },
+                  { fill: "none", fillRule: "evenodd", transform: "translate(1 1)", strokeWidth: "2" },
                   _react2.default.createElement(
                         "circle",
-                        { cx: "22", cy: "22", r: "6", "stroke-opacity": "0" },
+                        { cx: "22", cy: "22", r: "6", strokeOpacity: "0" },
                         _react2.default.createElement("animate", { attributeName: "r",
                               begin: "1.5s", dur: "3s",
                               values: "6;22",
@@ -780,7 +794,7 @@ exports.default = function (_ref) {
                   ),
                   _react2.default.createElement(
                         "circle",
-                        { cx: "22", cy: "22", r: "6", "stroke-opacity": "0" },
+                        { cx: "22", cy: "22", r: "6", strokeOpacity: "0" },
                         _react2.default.createElement("animate", { attributeName: "r",
                               begin: "3s", dur: "3s",
                               values: "6;22",
@@ -834,13 +848,13 @@ exports.default = function (_ref) {
         { width: width, height: height, viewBox: "0 0 58 58", xmlns: "http://www.w3.org/2000/svg" },
         _react2.default.createElement(
             "g",
-            { fill: "none", "fill-rule": "evenodd" },
+            { fill: "none", fillRule: "evenodd" },
             _react2.default.createElement(
                 "g",
-                { transform: "translate(2 1)", stroke: fill, "stroke-width": "1.5" },
+                { transform: "translate(2 1)", stroke: fill, strokeWidth: "1.5" },
                 _react2.default.createElement(
                     "circle",
-                    { cx: "42.601", cy: "11.462", r: "5", "fill-opacity": "1", fill: "#fff" },
+                    { cx: "42.601", cy: "11.462", r: "5", fillOpacity: "1", fill: fill },
                     _react2.default.createElement("animate", { attributeName: "fill-opacity",
                         begin: "0s", dur: "1.3s",
                         values: "1;0;0;0;0;0;0;0", calcMode: "linear",
@@ -848,7 +862,7 @@ exports.default = function (_ref) {
                 ),
                 _react2.default.createElement(
                     "circle",
-                    { cx: "49.063", cy: "27.063", r: "5", "fill-opacity": "0", fill: "#fff" },
+                    { cx: "49.063", cy: "27.063", r: "5", fillOpacity: "0", fill: fill },
                     _react2.default.createElement("animate", { attributeName: "fill-opacity",
                         begin: "0s", dur: "1.3s",
                         values: "0;1;0;0;0;0;0;0", calcMode: "linear",
@@ -856,7 +870,7 @@ exports.default = function (_ref) {
                 ),
                 _react2.default.createElement(
                     "circle",
-                    { cx: "42.601", cy: "42.663", r: "5", "fill-opacity": "0", fill: "#fff" },
+                    { cx: "42.601", cy: "42.663", r: "5", fillOpacity: "0", fill: fill },
                     _react2.default.createElement("animate", { attributeName: "fill-opacity",
                         begin: "0s", dur: "1.3s",
                         values: "0;0;1;0;0;0;0;0", calcMode: "linear",
@@ -864,7 +878,7 @@ exports.default = function (_ref) {
                 ),
                 _react2.default.createElement(
                     "circle",
-                    { cx: "27", cy: "49.125", r: "5", "fill-opacity": "0", fill: "#fff" },
+                    { cx: "27", cy: "49.125", r: "5", fillOpacity: "0", fill: fill },
                     _react2.default.createElement("animate", { attributeName: "fill-opacity",
                         begin: "0s", dur: "1.3s",
                         values: "0;0;0;1;0;0;0;0", calcMode: "linear",
@@ -872,7 +886,7 @@ exports.default = function (_ref) {
                 ),
                 _react2.default.createElement(
                     "circle",
-                    { cx: "11.399", cy: "42.663", r: "5", "fill-opacity": "0", fill: "#fff" },
+                    { cx: "11.399", cy: "42.663", r: "5", fillOpacity: "0", fill: fill },
                     _react2.default.createElement("animate", { attributeName: "fill-opacity",
                         begin: "0s", dur: "1.3s",
                         values: "0;0;0;0;1;0;0;0", calcMode: "linear",
@@ -880,7 +894,7 @@ exports.default = function (_ref) {
                 ),
                 _react2.default.createElement(
                     "circle",
-                    { cx: "4.938", cy: "27.063", r: "5", "fill-opacity": "0", fill: "#fff" },
+                    { cx: "4.938", cy: "27.063", r: "5", fillOpacity: "0", fill: fill },
                     _react2.default.createElement("animate", { attributeName: "fill-opacity",
                         begin: "0s", dur: "1.3s",
                         values: "0;0;0;0;0;1;0;0", calcMode: "linear",
@@ -888,7 +902,7 @@ exports.default = function (_ref) {
                 ),
                 _react2.default.createElement(
                     "circle",
-                    { cx: "11.399", cy: "11.462", r: "5", "fill-opacity": "0", fill: "#fff" },
+                    { cx: "11.399", cy: "11.462", r: "5", fillOpacity: "0", fill: fill },
                     _react2.default.createElement("animate", { attributeName: "fill-opacity",
                         begin: "0s", dur: "1.3s",
                         values: "0;0;0;0;0;0;1;0", calcMode: "linear",
@@ -896,7 +910,7 @@ exports.default = function (_ref) {
                 ),
                 _react2.default.createElement(
                     "circle",
-                    { cx: "27", cy: "5", r: "5", "fill-opacity": "0", fill: "#fff" },
+                    { cx: "27", cy: "5", r: "5", fillOpacity: "0", fill: fill },
                     _react2.default.createElement("animate", { attributeName: "fill-opacity",
                         begin: "0s", dur: "1.3s",
                         values: "0;0;0;0;0;0;0;1", calcMode: "linear",
@@ -937,20 +951,20 @@ exports.default = function (_ref) {
             _react2.default.createElement(
                 "linearGradient",
                 { x1: "8.042%", y1: "0%", x2: "65.682%", y2: "23.865%", id: "a" },
-                _react2.default.createElement("stop", { "stop-color": "#fff", "stop-opacity": "0", offset: "0%" }),
-                _react2.default.createElement("stop", { "stop-color": "#fff", "stop-opacity": ".631", offset: "63.146%" }),
-                _react2.default.createElement("stop", { "stop-color": "#fff", offset: "100%" })
+                _react2.default.createElement("stop", { stopColor: fill, stopOpacity: "0", offset: "0%" }),
+                _react2.default.createElement("stop", { stopColor: fill, stopOpacity: ".631", offset: "63.146%" }),
+                _react2.default.createElement("stop", { stopColor: fill, offset: "100%" })
             )
         ),
         _react2.default.createElement(
             "g",
-            { fill: "none", "fill-rule": "evenodd" },
+            { fill: "none", fillRule: "evenodd" },
             _react2.default.createElement(
                 "g",
                 { transform: "translate(1 1)" },
                 _react2.default.createElement(
                     "path",
-                    { d: "M36 18c0-9.94-8.06-18-18-18", id: "Oval-2", stroke: "url(#a)", "stroke-width": "2" },
+                    { d: "M36 18c0-9.94-8.06-18-18-18", id: "Oval-2", stroke: "url(#a)", strokeWidth: "2" },
                     _react2.default.createElement("animateTransform", {
                         attributeName: "transform",
                         type: "rotate",
@@ -1013,7 +1027,7 @@ exports.default = function (_ref) {
                     ),
                     _react2.default.createElement(
                               "circle",
-                              { cx: "60", cy: "15", r: "9", "fill-opacity": "0.3" },
+                              { cx: "60", cy: "15", r: "9", fillOpacity: "0.3" },
                               _react2.default.createElement("animate", { attributeName: "r", from: "9", to: "9",
                                         begin: "0s", dur: "0.8s",
                                         values: "9;15;9", calcMode: "linear",

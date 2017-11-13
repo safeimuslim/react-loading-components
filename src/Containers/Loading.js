@@ -17,8 +17,25 @@ import ThreeDots from '../Components/ThreeDots'
  */
 
  export default (props) => {
-  const loaders = [<Audio {...props} />, <BallTriangle {...props} />, <Bars {...props} />, <Circles {...props} />, <Grid {...props} />, <Hearts {...props} />, <Oval {...props} />, <Puff {...props} />, <Rings {...props} />, <SpinningCircles {...props} />, <TailSpin {...props} />, <ThreeDots {...props} /> ]
+  let params = {...props}
+  if (!params.width) {
+    params.width = 128
+  }
+  
+  if (!params.height) {
+    params.height = 64
+  }
+  
+  if (!params.fill) {
+    params.fill = '#ffffff'
+  }
+  const loaders = 
+                [
+                  <Audio {...params} />, <BallTriangle {...params} />, <Bars {...params} />, <Circles {...params} />, <Grid {...params} />, 
+                  <Hearts {...params} />, <Oval {...params} />, <Puff {...params} />, <Rings {...params} />, <SpinningCircles {...params} />, 
+                  <TailSpin {...params} />, <ThreeDots {...params} /> 
+                ]
   const types = ['audio', 'ball_triangle', 'bars', 'circles', 'grid', 'hearts', 'oval', 'puff', 'rings', 'spinning_circles', 'tail_spin', 'three_dots']
-  const indexOfTypes = types.indexOf(props.type)
+  const indexOfTypes = types.indexOf(params.type)
   return indexOfTypes < 0 ? loaders[0] : loaders[indexOfTypes]
 }
