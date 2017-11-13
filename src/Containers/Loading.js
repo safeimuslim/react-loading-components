@@ -19,7 +19,7 @@ import ThreeDots from '../Components/ThreeDots'
  export default (props) => {
   let params = {...props}
   if (!params.width) {
-    params.width = 128
+    params.width = 64
   }
   
   if (!params.height) {

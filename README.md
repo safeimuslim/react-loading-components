@@ -47,7 +47,7 @@ export default Example;
 
 | Name | Type | Default Value |
 |:------:|:------:|:---------------:|
-| type | String | balls |
+| type | String | audio |
 | fill | String | `#ffffff` |
 | height | Number or String | 64 (px) |
 | width | Number or String | 64 (px) |
