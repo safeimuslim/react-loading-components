@@ -18,7 +18,7 @@
     "svg"
   ],
   "author": "Safei Muslim <safeydev@gmail.com> (http://www.safeimuslim.com)",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/safeimuslim/react-loading/issues"
   },
