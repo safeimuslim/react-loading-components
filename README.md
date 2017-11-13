@@ -14,7 +14,7 @@ yarn add react-loading-components
 
 ## Demo
 
-[SOON]
+[DEMO](https://safeimuslim.github.io/react-loading-components-demo/)
 
 ## Loading Types
 * audio
