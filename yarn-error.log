@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /usr/local/bin/yarn install
+  /usr/local/bin/node /usr/local/bin/yarn build
 
 PATH: 
   /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin
@@ -16,7 +16,7 @@ Platform:
 npm manifest: 
   {
     "name": "react-loading-components",
-    "version": "1.1.4",
+    "version": "1.1.9",
     "description": "customable react loading component",
     "main": "build/index.js",
     "scripts": {
@@ -2903,4 +2903,4 @@ Lockfile:
       window-size "0.1.0"
 
 Trace: 
-  Error: EACCES: permission denied, unlink '/Users/safeimuslim/Documents/MY-NPM-PACKAGE/react-loading-components/node_modules/.bin/babel'
+  Error: EACCES: permission denied, mkdir '/Users/safeimuslim/Library/Caches/Yarn/v1/.tmp'
