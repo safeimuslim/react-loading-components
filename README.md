@@ -1,6 +1,8 @@
 # react-loading-components
 Easy to use loading animations for React projects. Uses SVG animations from SamHerbert [SVG-Loaders](https://github.com/SamHerbert/SVG-Loaders) project.
 
+[![NPM](https://nodei.co/npm/react-loading-components.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/react-loading-components/)
+
 ## Installation
 
 ```
