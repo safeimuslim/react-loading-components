@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/safeimuslim/react-loading/issues"
   },
-  "homepage": "https://github.com/safeimuslim/react-loading#readme",
+  "homepage": "https://github.com/safeimuslim/react-loading-components#readme",
   "dependencies": {
     "react": "^15.4.0",
     "react-dom": "^15.4.0",
