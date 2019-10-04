@@ -9,9 +9,11 @@
     "start": "webpack --watch",
     "build": "webpack",
     "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
-
   },
-  "pre-commit": [ "precommit-msg", "test" ],
+  "pre-commit": [
+    "precommit-msg",
+    "test"
+  ],
   "repository": "git+https://github.com/safeimuslim/react-loading-components.git",
   "keywords": [
     "react",
@@ -40,6 +42,7 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-15": "^1.4.0",
     "jest": "^24.9.0",
+    "pre-commit": "^1.2.2",
     "react-test-renderer": "^15.6.2"
   },
   "jest": {
