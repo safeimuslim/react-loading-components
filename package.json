@@ -7,8 +7,11 @@
     "test": "jest",
     "test:dev": "jest --watch",
     "start": "webpack --watch",
-    "build": "webpack"
+    "build": "webpack",
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
+
   },
+  "pre-commit": [ "precommit-msg", "test" ],
   "repository": "git+https://github.com/safeimuslim/react-loading-components.git",
   "keywords": [
     "react",
