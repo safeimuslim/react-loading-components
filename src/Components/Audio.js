@@ -1,6 +1,6 @@
 import React from 'react'
-export default ({ width, height, fill }) => (
-  <svg width={width} height={height} viewBox="0 0 55 80" xmlns="http://www.w3.org/2000/svg" fill={fill}>
+export default (props) => (
+    <svg width={64} height={64} fill="#ffffff" {...props} viewBox="0 0 55 80" xmlns="http://www.w3.org/2000/svg" >
       <g transform="matrix(1 0 0 -1 0 80)">
           <rect width="10" height="20" rx="3">
               <animate attributeName="height"
