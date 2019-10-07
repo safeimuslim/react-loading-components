@@ -4,10 +4,16 @@
   "description": "customable react loading component",
   "main": "build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "test:dev": "jest --watch",
     "start": "webpack --watch",
-    "build": "webpack"
+    "build": "webpack",
+    "precommit-msg": "echo 'Pre-commit checks...' && exit 0"
   },
+  "pre-commit": [
+    "precommit-msg",
+    "test"
+  ],
   "repository": "git+https://github.com/safeimuslim/react-loading-components.git",
   "keywords": [
     "react",
@@ -28,9 +34,20 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
+    "babel-jest": "^24.9.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-env": "^1.6.1"
+    "babel-preset-env": "^1.6.1",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-15": "^1.4.0",
+    "jest": "^24.9.0",
+    "pre-commit": "^1.2.2",
+    "react-test-renderer": "^15.6.2"
+  },
+  "jest": {
+    "setupFiles": [
+      "./src/setupTests.js"
+    ]
   }
 }
